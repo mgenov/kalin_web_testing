@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+          
+        <title>Calculator</title>
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel='stylesheet' type='text/css' href="./css/calc.css">
+      <style> 
+              
+
+      </style>
+
+     <script>
+          
+          function handleClear() {              
+               document.querySelector('#result').value =  calculator.clearAll(); 
+          }
+          function handleDelLast() {              
+               document.querySelector('#result').value =  calculator.delLast(); 
+          }
+          function handleEvaluate() {              
+               document.querySelector('#result').value =  calculator.evaluate(); 
+          }
+          function handleOnBtn(bb) {  
+               let b = bb;          
+               document.querySelector('#result').value =  calculator.onBtn(b); 
+               
+          }
+     </script>
+
+    </head>
+
+    <body>
+     
+        <div class='container justify-content-center '>
+             
+          <div class='calculator'>
+
+                <h2><strong>Calculator</h2>
+                <div class = 'row justify-content-center result-row'>
+                        <input type=text class='result' id='result' value="" readonly>
+                </div>
+            
+           
+           
+           <div class = 'row justify-content-center top-btns'>
+               
+                    <button class="btn-danger btnF" onclick="handleClear()">AC</button>   
+                    <button class="btn-danger btnF" onclick="handleDelLast()">CE</button>         
+
+           </div>
+
+           <div class="row justify-content-center btns-row">
+               
+                    <button class="btn-warning btnS" value='7' onclick="handleOnBtn('7')">7</button>
+                    <button class="btn-warning btnS" value='8' onclick="handleOnBtn('8')">8</button>
+                    <button class="btn-warning btnS" value='9' onclick="handleOnBtn('9')">9</button>
+                    <button class="btn-primary btnS" value='*' onclick="handleOnBtn('*')">*</button>
+           </div>
+
+           <div class="row justify-content-center btns-row">
+                <button class="btn-warning btnS" value='4' onclick="handleOnBtn('4')">4</button>
+                <button class="btn-warning btnS" value='5' onclick="handleOnBtn('5')">5</button>
+                <button class="btn-warning btnS" value='6' onclick="handleOnBtn('6')">6</button>
+                <button class="btn-primary btnS" value='/' onclick="handleOnBtn('/')">/</button>
+
+
+                  
+           </div>
+           
+           <div class="row justify-content-center btns-row">
+
+                <button class="btn-warning btnS" value='1' onclick="handleOnBtn('1')">1</button>
+                <button class="btn-warning btnS" value='2' onclick="handleOnBtn('2')">2</button>
+                <button class="btn-warning btnS" value='3' onclick="handleOnBtn('3')">3</button>
+                <button class="btn-primary btnS" value='-' onclick="handleOnBtn('-')">-</button>
+
+
+           </div>
+
+           <div class="row justify-content-center btns-row">
+
+                <button class="btn-secondary btnS" value='.' onclick="handleOnBtn('.')">.</button>
+                <button class="btn-success btnF" onclick='handleEvaluate()'>=</button>
+                <button class="btn-primary btnS" value='+' onclick="handleOnBtn('+')">+</button>
+                <button class="btn-warning btnS" value='0' onclick="handleOnBtn('0')">0</button>
+
+
+
+           </div>
+
+          </div>
+             
+
+     
+           
+            
+        </div>
+        
+        <script src='../dist/app.bundle.js'></script> 
+    </body>
+    
+</html>
+
