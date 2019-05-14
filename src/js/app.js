@@ -65,6 +65,11 @@ function createCalculator()
 
         let result = new String( eval(expression.value))          
 
+        if (result == 'undefined')                        
+        {
+            result = '0'
+        }
+
         expression.value = result
         expression.isResult = true
         if (/([\\.])/.test(result))
@@ -114,6 +119,7 @@ function createCalculator()
     it only buggs the first number.
 
 */
+
 
 let calculator = createCalculator();
 
