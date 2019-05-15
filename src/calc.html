@@ -1,41 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <head> 
-          
+    <head>           
         <title>Calculator</title>
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel='stylesheet' type='text/css' href="./css/calc.css">
-      <style> 
-              
-
-      </style>
-
-     <script>
-          
-          function handleClear() {              
-               document.querySelector('#result').value =  calculator.clearAll(); 
-          }
-          function handleDelLast() {              
-               document.querySelector('#result').value =  calculator.delLast(); 
-          }
-          function handleEvaluate() {              
-               document.querySelector('#result').value =  calculator.evaluate(); 
-          }
-          function handleOnBtn(bb) {  
-               let b = bb;          
-               document.querySelector('#result').value =  calculator.onBtn(b); 
-               
-          }
-     </script>
-
+        <link rel='stylesheet' type='text/css' href="./css/calc.css">     
     </head>
-
-    <body>
-     
-        <div class='container justify-content-center '>
-             
+    <body>     
+        <div class='container justify-content-center '>             
           <div class='calculator'>
 
                 <h2><strong>Calculator</h2>
@@ -86,21 +59,27 @@
                 <button class="btn-success btnF" onclick='handleEvaluate()'>=</button>
                 <button class="btn-primary btnS" value='+' onclick="handleOnBtn('+')">+</button>
                 <button class="btn-warning btnS" value='0' onclick="handleOnBtn('0')">0</button>
-
-
-
            </div>
+          </div>                 
+        </div>                
 
-          </div>
-             
-
-     
-           
-            
-        </div>
-        
-        <script src='../dist/app.bundle.js'></script> 
-    </body>
-    
+        <script>                  
+          
+          function handleClear() {  
+                           
+               document.querySelector('#result').value =  calculator.clearAll(); 
+          }
+          function handleDelLast() {              
+               document.querySelector('#result').value =  calculator.delLast(); 
+          }
+          function handleEvaluate() {              
+               document.querySelector('#result').value =  calculator.evaluate(); 
+          }
+          function handleOnBtn(bb) {  
+               let b = bb;          
+               document.querySelector('#result').value =  calculator.onBtn(b);                
+          }
+     </script>
+    </body>    
 </html>
 

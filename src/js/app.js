@@ -1,5 +1,3 @@
-
-
 function createCalculator()
 {
     let expression = {value: '', isResult: false, allowDot: true}
@@ -103,24 +101,16 @@ function createCalculator()
             if (removed == '.'){
                 expression.allowDot = true
             } else if ( /([-|+|*|/])/.test(removed) && /([\\.])/.test(expression.value)  && !/([-|+|*|/])/.test(expression.value))
-            {
-               
+            {               
                 expression.allowDot = false
             }
         }
-
         return expression.value
     }
    };
 }
 
-/* There is a bug i don't know how to fix. If you delete operator after the second number or above, you can add extra dots
-    And if you remove the nagetive symbol on Row 100's statement  !/([-|+|*|/])/.test(expression.value) ,
-    it only buggs the first number.
+let calculator = createCalculator()
 
-*/
-
-
-let calculator = createCalculator();
-
-
+// Make sure that calculator variable could be accessed globally.
+global.calculator = calculator
